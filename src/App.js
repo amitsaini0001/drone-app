@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useAppContext, allPages } from "./Context/AppContext";
+import { AuthPage, ControlPage, RemotePage } from "./Pages";
+import { Container } from "./Components";
+import { useEffect } from "react";
 
 function App() {
+  const appState = useAppContext().appState;
+  const isAuth = localStorage.getItem("isAuth");
+
+  if (!isAuth || isAuth === "false") {
+    return <AuthPage />;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      {appState.currentPage === allPages.control && <ControlPage />}
+      {appState.currentPage === allPages.remote && <RemotePage />}
+    </Container>
   );
 }
 

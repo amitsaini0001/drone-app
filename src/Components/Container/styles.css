@@ -1,0 +1,78 @@
+.main-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.topbar {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  height: 2rem;
+  background-color: transparent;
+  width:100%;
+  top:0;
+  left:0;
+  font-weight: 700;
+}
+
+.bottom-bar {
+  background-color: grey;
+  max-height: 1rem;
+  height: 100%;
+  padding: 0.2rem;
+  overflow: hidden;
+}
+
+.buttons-left {
+}
+
+.buttons-right {
+}
+
+.buttons-left a {
+  margin: 0 0.25rem 0 1rem;
+  padding: 0.25rem 0.25rem;
+  border: 2px solid;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  line-height: 1;
+  transition: 0.25s;
+}
+
+.buttons-left .buttons {
+  margin: 0 0.25rem 0 1rem;
+  padding: 0.25rem 0.25rem;
+  border: 2px solid;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  color: grey;
+}
+
+.buttons-left .btn-selected {
+  color: blueviolet;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0.75em 0.5em -0.4em grey;
+  transform: translateY(-0.25em);
+}

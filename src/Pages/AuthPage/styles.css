@@ -1,0 +1,24 @@
+.main{
+    background-color: aqua;
+    display: flex;
+    height: 100%;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input { 
+    margin-bottom: 1rem;
+    height: 2rem;
+}
+
+.submit:hover {
+    cursor:pointer;
+}
